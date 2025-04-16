@@ -1,0 +1,31 @@
+## Compilação
+bin/
+obj/
+
+## Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Rider
+.idea/
+
+## Arquivos de log e temporários
+*.log
+*.tmp
+
+## Backup e arquivos de sistema
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+## Configurações específicas de máquina
+*.userprefs
+*.csproj.user
+*.dotCover
+
+## Arquivos gerados
+Generated_Code/
