@@ -11,7 +11,7 @@ namespace Secao4
     {
         static double Pi = 3.14;
 
-        static void MainOld(string[] args)
+        public static void Run()
         {
             Console.WriteLine("Entre o valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);

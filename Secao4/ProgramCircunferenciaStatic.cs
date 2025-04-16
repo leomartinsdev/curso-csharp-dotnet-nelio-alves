@@ -4,7 +4,7 @@ namespace Secao4
 {
     internal class ProgramCircunferenciaStatic
     {
-        static void Main(string[] args)
+        public static void Run()
         {
             Console.WriteLine("Entre o valor do raio: ");
             double raio = double.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);

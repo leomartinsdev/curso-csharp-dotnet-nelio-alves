@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Globalization;
 
 namespace Secao4
 {
     internal class ProgramTriangulo
     {
-        static void MainOld(string[] args)
+        public static void Run()
         {
             Triangulo x, y;
             x = new Triangulo();
@@ -22,7 +21,6 @@ namespace Secao4
             y.C = double.Parse(Console.ReadLine());
 
             double areaX = x.Area();
-
             double areaY = y.Area();
 
             Console.WriteLine("Área de X = " + areaX.ToString("F4"));
@@ -36,7 +34,6 @@ namespace Secao4
             {
                 Console.WriteLine("Maior área: Y");
             }
-
         }
     }
 }

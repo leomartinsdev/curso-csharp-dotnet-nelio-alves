@@ -5,7 +5,7 @@ namespace Secao4
 {
     internal class ProgramProduto
     {
-        static void MainOld(string[] args)
+        public static void Run()
         {
             Produto p = new Produto();
 
@@ -33,7 +33,7 @@ namespace Secao4
             qtd = int.Parse(Console.ReadLine());
             p.RemoverProduto(qtd);
 
-            Console.WriteLine("Dados atualizadados: " + p);
+            Console.WriteLine("Dados atualizados: " + p);
         }
     }
 }

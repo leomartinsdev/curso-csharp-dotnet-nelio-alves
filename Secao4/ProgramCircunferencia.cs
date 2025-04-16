@@ -1,19 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Secao4
 {
     internal class ProgramCircunferencia
     {
-        static void MainOld(string[] args)
+        public static void Run()
         {
             Calculadora calc = new Calculadora();
             Console.WriteLine("Entre o valor do raio: ");
-            double raio = double.Parse(Console.ReadLine(), System.Globalization.CultureInfo.InvariantCulture);
+            double raio = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
             double circ = calc.CalcularCircunferencia(raio);
             double volume = calc.Volume(raio);
