@@ -10,11 +10,47 @@ namespace Secao5
         public int Quantidade;
         */
 
-        // Setando os atributos como privados, para não serem acessados diretamente.
-        // Convenção de nomes: quando o atributo é private, mudamos ele para começar com underline e letra minúscula
+        /* Aula 55 - Setando os atributos como privados, para não serem acessados diretamente.
+        Convenção de nomes: quando o atributo é private, mudamos ele para começar com underline e letra minúscula */
         private string _nome;
         private double _preco;
         private int _quantidade;
+
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
+        }
+
+        public double Preco
+        {
+            get { return _preco; }
+            set
+            {
+                if (value > 0)
+                {
+                    _preco = value;
+                }
+            }
+        }
+
+        public int Quantidade
+        {
+            get { return _quantidade; }
+            set
+            {
+                if (value >= 0)
+                {
+                    _quantidade = value;
+                }
+            }
+        }
 
         // Construtor Padrão
         public Produto()
@@ -37,7 +73,8 @@ namespace Secao5
             _quantidade = 0; // Essa linha é dispensável porque padrão números começam com 0.
         }
 
-        /* Poderia fazer dessa forma caso eu colocasse os argumentos também com letra maiúscula.
+        /* Aula 55 - Palavra this
+        Poderia fazer dessa forma caso eu colocasse os argumentos também com letra maiúscula.
         public Produto(string Nome, double Preco)
         {
             this.Nome = Nome;
@@ -61,14 +98,15 @@ namespace Secao5
             }
         */
 
-        // Getter para Nome
+        /* Getter manual para Nome
         public string GetNome()
         {
             return _nome;
         }
+        */
 
 
-        // Setter para Nome
+        /* Setter manual para Nome com validação
         public void SetNome(string nome)
         { 
             if (nome != null &&  nome.Length > 1)
@@ -76,6 +114,7 @@ namespace Secao5
                 _nome = nome;
             }
         }
+        */
 
         public double ValorTotalEmEstoque()
         {
