@@ -8,14 +8,14 @@ namespace Secao4
         {
             while (true)
             {
-                Console.WriteLine("Choose an exercise to run:");
+                Console.WriteLine("Escolha um Programa para rodar:");
                 Console.WriteLine("1 - ProgramProduto");
                 Console.WriteLine("2 - ProgramTriangulo");
                 Console.WriteLine("3 - Circunferencia");
                 Console.WriteLine("4 - ProgramCircunferencia");
                 Console.WriteLine("5 - ProgramCircunferenciaStatic");
-                Console.WriteLine("0 - Exit");
-                Console.Write("Enter your choice: ");
+                Console.WriteLine("0 - Sair");
+                Console.Write("Número do Programa: ");
 
                 string choice = Console.ReadLine();
                 Console.WriteLine();
@@ -38,10 +38,10 @@ namespace Secao4
                         ProgramCircunferenciaStatic.Run();
                         break;
                     case "0":
-                        Console.WriteLine("Exiting...");
+                        Console.WriteLine("Saindo...");
                         return;
                     default:
-                        Console.WriteLine("Invalid choice. Please try again.");
+                        Console.WriteLine("Escolha inválida. Tente novamente.");
                         break;
                 }
 
