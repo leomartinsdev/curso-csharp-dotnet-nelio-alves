@@ -4,29 +4,37 @@ namespace Secao5
 {
     internal class Produto
     {
+        /*
         public string Nome;
         public double Preco;
         public int Quantidade;
+        */
+
+        // Setando os atributos como privados, para não serem acessados diretamente.
+        // Convenção de nomes: quando o atributo é private, mudamos ele para começar com underline e letra minúscula
+        private string _nome;
+        private double _preco;
+        private int _quantidade;
 
         // Construtor Padrão
         public Produto()
         {
-            Quantidade = 10;
+            _quantidade = 10;
         }
 
         // Construtores Sobrecarga com 3 parâmetros e 2 parâmetros
         public Produto(string nome, double preco, int quantidade)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = quantidade;
+            _nome = nome;
+            _preco = preco;
+            _quantidade = quantidade;
         }
 
         public Produto(string nome, double preco)
         {
-            Nome = nome;
-            Preco = preco;
-            Quantidade = 0; // Essa linha é dispensável porque padrão números começam com 0.
+            _nome = nome;
+            _preco = preco;
+            _quantidade = 0; // Essa linha é dispensável porque padrão números começam com 0.
         }
 
         /* Poderia fazer dessa forma caso eu colocasse os argumentos também com letra maiúscula.
@@ -53,28 +61,44 @@ namespace Secao5
             }
         */
 
+        // Getter para Nome
+        public string GetNome()
+        {
+            return _nome;
+        }
+
+
+        // Setter para Nome
+        public void SetNome(string nome)
+        { 
+            if (nome != null &&  nome.Length > 1)
+            {
+                _nome = nome;
+            }
+        }
+
         public double ValorTotalEmEstoque()
         {
-            return Preco * Quantidade;
+            return _preco * _quantidade;
         }
 
         public void AdicionarProduto(int quantidade)
         {
-            Quantidade += quantidade;
+            _quantidade += quantidade;
         }
 
         public void RemoverProduto(int quantidade)
         {
-            Quantidade -= quantidade;
+            _quantidade -= quantidade;
         }
 
         public override string ToString()
         {
-            return Nome
+            return _nome
                 + ", $ "
-                + Preco.ToString("F2", CultureInfo.InvariantCulture)
+                + _preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + Quantidade
+                + _quantidade
                 + " unidades, Total: $ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }

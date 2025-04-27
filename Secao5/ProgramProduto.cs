@@ -44,6 +44,9 @@ namespace Secao5
             p.RemoverProduto(qtd);
 
             Console.WriteLine("Dados atualizados: " + p);
+
+            Console.WriteLine(p.GetNome());
+            p.SetNome("Computador Gamer");
         }
     }
 }
