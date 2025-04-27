@@ -13,8 +13,9 @@ namespace Secao5
         /* Aula 55 - Setando os atributos como privados, para não serem acessados diretamente.
         Convenção de nomes: quando o atributo é private, mudamos ele para começar com underline e letra minúscula */
         private string _nome;
-        private double _preco;
-        private int _quantidade;
+        /* Aula 57. Auto Properties. Aqui é permitido buscar o preço, mas não é permitido alterar o preço. */
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
 
         public string Nome
         {
@@ -28,49 +29,25 @@ namespace Secao5
             }
         }
 
-        public double Preco
-        {
-            get { return _preco; }
-            set
-            {
-                if (value > 0)
-                {
-                    _preco = value;
-                }
-            }
-        }
-
-        public int Quantidade
-        {
-            get { return _quantidade; }
-            set
-            {
-                if (value >= 0)
-                {
-                    _quantidade = value;
-                }
-            }
-        }
-
         // Construtor Padrão
         public Produto()
         {
-            _quantidade = 10;
+            Quantidade = 10;
         }
 
         // Construtores Sobrecarga com 3 parâmetros e 2 parâmetros
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
         public Produto(string nome, double preco)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = 0; // Essa linha é dispensável porque padrão números começam com 0.
+            Preco = preco;
+            Quantidade = 0; // Essa linha é dispensável porque padrão números começam com 0.
         }
 
         /* Aula 55 - Palavra this
@@ -118,26 +95,26 @@ namespace Secao5
 
         public double ValorTotalEmEstoque()
         {
-            return _preco * _quantidade;
+            return Preco * Quantidade;
         }
 
         public void AdicionarProduto(int quantidade)
         {
-            _quantidade += quantidade;
+            Quantidade += quantidade;
         }
 
         public void RemoverProduto(int quantidade)
         {
-            _quantidade -= quantidade;
+            Quantidade -= quantidade;
         }
 
         public override string ToString()
         {
             return _nome
                 + ", $ "
-                + _preco.ToString("F2", CultureInfo.InvariantCulture)
+                + Preco.ToString("F2", CultureInfo.InvariantCulture)
                 + ", "
-                + _quantidade
+                + Quantidade
                 + " unidades, Total: $ "
                 + ValorTotalEmEstoque().ToString("F2", CultureInfo.InvariantCulture);
         }
