@@ -17,18 +17,6 @@ namespace Secao5
         public double Preco { get; private set; }
         public int Quantidade { get; private set; }
 
-        public string Nome
-        {
-            get { return _nome; }
-            set
-            {
-                if (value != null && value.Length > 1)
-                {
-                    _nome = value;
-                }
-            }
-        }
-
         // Construtor Padrão
         public Produto()
         {
@@ -59,6 +47,18 @@ namespace Secao5
             this.Quantidade = 0;
         }
         */
+
+        public string Nome
+        {
+            get { return _nome; }
+            set
+            {
+                if (value != null && value.Length > 1)
+                {
+                    _nome = value;
+                }
+            }
+        }
 
         /* Reaproveiando construtores:
          * Reaproveita o construtor padrão que define a quantidade = 10

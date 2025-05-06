@@ -45,8 +45,8 @@ namespace Secao5
 
             Console.WriteLine("Dados atualizados: " + p);
 
-            Console.WriteLine(p.GetNome());
-            p.SetNome("Computador Gamer");
+            //Console.WriteLine(p.GetNome());
+            //p.SetNome("Computador Gamer");
         }
     }
 }
