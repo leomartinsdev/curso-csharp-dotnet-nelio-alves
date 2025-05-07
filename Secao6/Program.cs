@@ -9,8 +9,8 @@ namespace Secao6
             while (true)
             {
                 Console.WriteLine("Escolha um Programa para rodar:");
-                Console.WriteLine("1 - ProgramProduto");
-                Console.WriteLine("2 - ProgramContaBancaria");
+                Console.WriteLine("1 - NullableExampleProgram");
+                Console.WriteLine("2 - VetoresParte1Program");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -20,10 +20,10 @@ namespace Secao6
                 switch (choice)
                 {
                     case "1":
-                        //ProgramProduto.Run();
+                        NullableExampleProgram.Run();
                         break;
                     case "2":
-                        //ProgramContaBancaria.Run();
+                        VetoresParte1Program.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
