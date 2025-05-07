@@ -11,6 +11,7 @@ namespace Secao6
                 Console.WriteLine("Escolha um Programa para rodar:");
                 Console.WriteLine("1 - NullableExampleProgram");
                 Console.WriteLine("2 - VetoresParte1Program");
+                Console.WriteLine("3 - VetoresParte2Program");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -24,6 +25,9 @@ namespace Secao6
                         break;
                     case "2":
                         VetoresParte1Program.Run();
+                        break;
+                    case "3":
+                        VetoresParte2Program.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");

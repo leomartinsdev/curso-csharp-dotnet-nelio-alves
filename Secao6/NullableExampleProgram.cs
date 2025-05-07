@@ -31,6 +31,7 @@ namespace Secao6
             {
                 Console.WriteLine("x não tem valor.");
             }
+
             Console.WriteLine(k.Value);
 
             // Operador de coalescência nula
