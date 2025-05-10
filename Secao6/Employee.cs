@@ -14,8 +14,8 @@ namespace Secao6
         public double Salary { get; set; } = salary;
 
         public void IncreaseSalary(double percentage)
-        { 
-            Salary += Salary * (percentage/100); 
+        {
+            Salary += Salary * (percentage / 100);
         }
     }
 }

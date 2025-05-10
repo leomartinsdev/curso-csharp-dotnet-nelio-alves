@@ -65,7 +65,8 @@ namespace Secao6
             }
 
             Console.WriteLine("Updated list of employees: ");
-            foreach (Employee employee in employees) {
+            foreach (Employee employee in employees)
+            {
                 Console.WriteLine(employee.Id + ", " + employee.Name + ", " + employee.Salary.ToString("F2", CultureInfo.InvariantCulture));
             }
         }
