@@ -9,7 +9,8 @@ namespace Secao7
             while (true)
             {
                 Console.WriteLine("Escolha um Programa para rodar:");
-                Console.WriteLine("1 - NullableExampleProgram");
+                Console.WriteLine("1 - VarExample");
+                Console.WriteLine("2 - TernaryExample");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -19,7 +20,10 @@ namespace Secao7
                 switch (choice)
                 {
                     case "1":
-                        //NullableExampleProgram.Run();
+                        VarExample.Run();
+                        break;
+                    case "2":
+                        TernaryExample.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
