@@ -15,6 +15,7 @@ namespace Secao6
                 Console.WriteLine("4 - TripleProgram");
                 Console.WriteLine("5 - ForeachExampleProgram");
                 Console.WriteLine("6 - ExerciseListsProgram");
+                Console.WriteLine("7 - MatrixSolvedExerciseProgram");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -40,6 +41,9 @@ namespace Secao6
                         break;
                     case "6":
                         ExerciseListsProgram.Run();
+                        break;
+                    case "7":
+                        MatrixSolvedExerciseProgram.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
