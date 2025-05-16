@@ -41,7 +41,6 @@ namespace Secao7
 
 
             // Algumas propriedades
-
             TimeSpan v1 = TimeSpan.MaxValue;
             TimeSpan v2 = TimeSpan.MinValue;
             TimeSpan v3 = TimeSpan.Zero;
@@ -59,7 +58,6 @@ namespace Secao7
             Console.WriteLine(v4.Ticks);
 
             // Algumas operações
-
             TimeSpan o1 = new TimeSpan(1, 30, 10);
             TimeSpan o2 = new TimeSpan(0, 10, 5);
 
