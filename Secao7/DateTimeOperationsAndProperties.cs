@@ -12,6 +12,7 @@ namespace Secao7
         {
             DateTime d = new DateTime(2001, 8, 15, 13, 45, 58, 275);
 
+            // Propriedades
             Console.WriteLine(d);
             Console.WriteLine("Date: " + d.Date);
             Console.WriteLine("Day: " + d.Day);
