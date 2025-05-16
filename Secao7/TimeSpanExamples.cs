@@ -38,6 +38,40 @@ namespace Secao7
             Console.WriteLine(t9);
             Console.WriteLine(t10);
             Console.WriteLine(t11);
+
+
+            // Algumas propriedades
+
+            TimeSpan v1 = TimeSpan.MaxValue;
+            TimeSpan v2 = TimeSpan.MinValue;
+            TimeSpan v3 = TimeSpan.Zero;
+            TimeSpan v4 = new TimeSpan(2, 3, 5, 7, 11);
+
+            Console.WriteLine(v1);
+            Console.WriteLine(v2);
+            Console.WriteLine(v3);
+            Console.WriteLine(v4);
+            Console.WriteLine(v4.Days);
+            Console.WriteLine(v4.Hours);
+            Console.WriteLine(v4.Minutes);
+            Console.WriteLine(v4.Milliseconds);
+            Console.WriteLine(v4.Seconds);
+            Console.WriteLine(v4.Ticks);
+
+            // Algumas operações
+
+            TimeSpan o1 = new TimeSpan(1, 30, 10);
+            TimeSpan o2 = new TimeSpan(0, 10, 5);
+
+            TimeSpan sum = o1.Add(o2);
+            TimeSpan dif = o1.Subtract(o2);
+            TimeSpan mult = o2.Multiply(2);
+            TimeSpan div = o2.Divide(2);
+
+            Console.WriteLine(sum);
+            Console.WriteLine(dif);
+            Console.WriteLine(mult);
+            Console.WriteLine(div);
         }
     }
 }
