@@ -10,6 +10,7 @@ namespace Secao8
             {
                 Console.WriteLine("Escolha um Programa para rodar:");
                 Console.WriteLine("1 - OrderProgram");
+                Console.WriteLine("2 - Exercise 1");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -20,6 +21,9 @@ namespace Secao8
                 {
                     case "1":
                         OrderProgram.OrderProgram.Run();
+                        break;
+                    case "2":
+                        Exercise1.Program.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
