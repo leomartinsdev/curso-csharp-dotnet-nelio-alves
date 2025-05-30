@@ -1,4 +1,4 @@
-﻿namespace Secao9.Class_108.Entities
+﻿namespace Secao9.Accounts.Entities
 {
     internal class Account
     {
