@@ -1,4 +1,4 @@
-﻿namespace Secao8
+﻿namespace Secao9
 {
     internal class Program
     {
@@ -19,13 +19,7 @@
                 switch (choice)
                 {
                     case "1":
-                        OrderProgram.OrderProgram.Run();
-                        break;
-                    case "2":
-                        Exercise1.Program.Run();
-                        break;
-                    case "3":
-                        Exercise2.Program.Run();
+                        //OrderProgram.OrderProgram.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
