@@ -7,9 +7,8 @@
             while (true)
             {
                 Console.WriteLine("Escolha um Programa para rodar:");
-                Console.WriteLine("1 - OrderProgram");
-                Console.WriteLine("2 - Exercise 1");
-                Console.WriteLine("3 - Exercise 2");
+                Console.WriteLine("1 - AccountsProgram");
+                Console.WriteLine("2 - SolvedExercise1");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -19,7 +18,10 @@
                 switch (choice)
                 {
                     case "1":
-                        //OrderProgram.OrderProgram.Run();
+                        Accounts.Program.Run();
+                        break;
+                    case "2":
+                        SolvedExercise1.Program.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
