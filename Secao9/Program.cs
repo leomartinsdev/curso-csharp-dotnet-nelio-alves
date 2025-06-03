@@ -9,6 +9,7 @@
                 Console.WriteLine("Escolha um Programa para rodar:");
                 Console.WriteLine("1 - AccountsProgram");
                 Console.WriteLine("2 - SolvedExercise1");
+                Console.WriteLine("3 - Exercise1");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
@@ -22,6 +23,9 @@
                         break;
                     case "2":
                         SolvedExercise1.Program.Run();
+                        break;
+                    case "3":
+                        Exercise1.Program.Run();
                         break;
                     case "0":
                         Console.WriteLine("Exiting...");
