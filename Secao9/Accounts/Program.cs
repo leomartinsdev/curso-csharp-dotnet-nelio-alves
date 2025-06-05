@@ -6,7 +6,7 @@ namespace Secao9.Accounts
     {
         public static void Run()
         {
-            Account account = new Account(1001, "Vader", 0.0);
+            //Account account = new Account(1001, "Vader", 0.0); -> não funciona mais porque agora Account é abstrata
             BusinessAccount businessAccount = new BusinessAccount(1002, "Anakin", 0.0, 500.0);
 
             // UPCASTING (subclasse -> superclasse)
@@ -35,13 +35,11 @@ namespace Secao9.Accounts
                 Console.WriteLine("Update!");
             }
 
-            Account testWithdraw1 = new Account(1001, "Alex", 500.0);
+            //Account testWithdraw1 = new Account(1001, "Alex", 500.0); -> não funciona mais porque agora Account é abstrata
             Account testWithdraw2 = new SavingsAccount(1001, "Diana", 500.0, 0.01);
 
-            testWithdraw1.Withdraw(10.0);
             testWithdraw2.Withdraw(10.0);
 
-            Console.WriteLine(testWithdraw1.Balance);
             Console.WriteLine(testWithdraw2.Balance);
 
         }
