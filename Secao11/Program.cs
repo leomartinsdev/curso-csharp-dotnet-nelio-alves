@@ -1,28 +1,37 @@
-﻿using System.IO;
-
-namespace Secao11
+﻿namespace Secao11
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            string sourcePath = @"E:\Projetos DOTNET\file1.txt";
-            string targetPath = @"E:\Projetos DOTNET\file2.txt";
-
-            try
+            while (true)
             {
-                FileInfo fileInfo = new FileInfo(sourcePath);
-                fileInfo.CopyTo(targetPath);
+                Console.WriteLine("Escolha um Programa para rodar:");
+                Console.WriteLine("1 - Class 130 Program");
+                Console.WriteLine("2 - Class 131 Program");
+                Console.WriteLine("0 - Exit");
+                Console.Write("Número do Programa: ");
 
-                string[] lines = File.ReadAllLines(sourcePath);
-                foreach (string line in lines)
+                string choice = Console.ReadLine();
+                Console.WriteLine();
+
+                switch (choice)
                 {
-                    Console.WriteLine(line);
+                    case "1":
+                        Class130.Program.Run();
+                        break;
+                    case "2":
+                        Class131.Program.Run();
+                        break;
+                    case "0":
+                        Console.WriteLine("Exiting...");
+                        return;
+                    default:
+                        Console.WriteLine("Invalid choice. Please try again.");
+                        break;
                 }
-            }
-            catch (IOException e)
-            {
-                Console.WriteLine($"Error occured: {e.Message}");
+
+                Console.WriteLine();
             }
         }
     }
