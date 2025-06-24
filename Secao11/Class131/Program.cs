@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace Secao11.Class131
+﻿namespace Secao11.Class131
 {
     class Program
     {
