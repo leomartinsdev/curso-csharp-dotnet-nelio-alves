@@ -23,7 +23,7 @@ namespace Secao12.CarRentalProgram
 
             CarRental carRental = new CarRental(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new RentalService(hour, day);
+            RentalService rentalService = new RentalService(hour, day, new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 

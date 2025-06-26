@@ -7,12 +7,13 @@ namespace Secao12.CarRentalProgram.Services
         public double PricePerHour { get; private set; }
         public double PricePerDay { get; private set; }
 
-        private BrazilTaxService _brazilTexService = new BrazilTaxService();
+        private ITaxService _taxService;
 
-        public RentalService(double pricePerHour, double pricePerDay)
+        public RentalService(double pricePerHour, double pricePerDay, ITaxService taxService)
         {
             PricePerHour = pricePerHour;
             PricePerDay = pricePerDay;
+            _taxService = taxService;
         }
 
         public void ProcessInvoice(CarRental carRental)
@@ -30,7 +31,7 @@ namespace Secao12.CarRentalProgram.Services
                 basePayment = PricePerDay * Math.Ceiling(duration.TotalDays);
             }
 
-            double tax = _brazilTexService.Tax(basePayment);
+            double tax = _taxService.Tax(basePayment);
 
             carRental.Invoice = new Invoice(basePayment, tax);
 
