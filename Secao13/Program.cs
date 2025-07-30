@@ -10,7 +10,7 @@
                 Console.WriteLine("1 - Print Program");
                 Console.WriteLine("2 - Calculation Program");
                 Console.WriteLine("3 - GetHashCode Program");
-                Console.WriteLine("3 - HashSet & SortedSet 1 Program");
+                Console.WriteLine("4 - HashSet & SortedSet 1 Program");
                 Console.WriteLine("0 - Exit");
                 Console.Write("Número do Programa: ");
 
